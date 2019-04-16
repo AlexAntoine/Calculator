@@ -63,7 +63,7 @@
             this.grpExtraFunctions.Controls.Add(this.btnPercent);
             this.grpExtraFunctions.Controls.Add(this.btnIntegerDivision);
             this.grpExtraFunctions.Controls.Add(this.btnModulus);
-            this.grpExtraFunctions.Location = new System.Drawing.Point(723, 139);
+            this.grpExtraFunctions.Location = new System.Drawing.Point(731, 148);
             this.grpExtraFunctions.Name = "grpExtraFunctions";
             this.grpExtraFunctions.Size = new System.Drawing.Size(352, 222);
             this.grpExtraFunctions.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.grpNormalFunctions.Controls.Add(this.btnAdd);
             this.grpNormalFunctions.Location = new System.Drawing.Point(39, 139);
             this.grpNormalFunctions.Name = "grpNormalFunctions";
-            this.grpNormalFunctions.Size = new System.Drawing.Size(279, 222);
+            this.grpNormalFunctions.Size = new System.Drawing.Size(307, 231);
             this.grpNormalFunctions.TabIndex = 2;
             this.grpNormalFunctions.TabStop = false;
             this.grpNormalFunctions.Text = "Pick A Function";
