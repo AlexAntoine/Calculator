@@ -22,6 +22,9 @@ namespace Calculator
 
         private void frmCalculator_Load(object sender, EventArgs e)
         {
+            grpNormalFunctions.Visible = false;
+            grpExtraFunctions.Visible = false;
+            txtResult.Visible = false;
 
         }
 
@@ -37,19 +40,22 @@ namespace Calculator
 
         private void grpNormalFunctions_Enter(object sender, EventArgs e)
         {
-
+            
         }
 
         private void grpExtraFunctions_Enter(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
             if (double.TryParse(txtInputFirstNumber.Text, out first) && double.TryParse(txtInputSecondNumber.Text, out second))
             {
+                txtResult.Visible = true;
                 txtResult.Text = cal.add(first, second);
+              
             }
             else
             {
@@ -91,9 +97,30 @@ namespace Calculator
             Application.Exit();
         }
 
-        private void txtResult_TextChanged(object sender, EventArgs e)
+        private void txtInputFirstNumber_TextChanged(object sender, EventArgs e)
         {
 
+            if (txtInputFirstNumber.Text != "" && txtInputSecondNumber.Text != "")
+            {
+                grpNormalFunctions.Visible = true;
+                grpExtraFunctions.Visible = true;
+            }
+        }
+
+        private void txtInputSecondNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (txtInputFirstNumber.Text != "" && txtInputSecondNumber.Text != "")
+            {
+                grpNormalFunctions.Visible = true;
+                grpExtraFunctions.Visible = true;
+            }
+                
+           
+        }
+
+        private void txtResult_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

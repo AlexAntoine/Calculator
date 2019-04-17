@@ -156,18 +156,19 @@
             // 
             // txtInputFirstNumber
             // 
-            this.txtInputFirstNumber.Location = new System.Drawing.Point(433, 174);
+            this.txtInputFirstNumber.Location = new System.Drawing.Point(425, 174);
             this.txtInputFirstNumber.MaxLength = 45000;
             this.txtInputFirstNumber.Multiline = true;
             this.txtInputFirstNumber.Name = "txtInputFirstNumber";
-            this.txtInputFirstNumber.Size = new System.Drawing.Size(170, 44);
+            this.txtInputFirstNumber.Size = new System.Drawing.Size(178, 41);
             this.txtInputFirstNumber.TabIndex = 3;
             this.txtInputFirstNumber.Text = "Input First Number";
             this.txtInputFirstNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInputFirstNumber.TextChanged += new System.EventHandler(this.txtInputFirstNumber_TextChanged);
             // 
             // txtInputSecondNumber
             // 
-            this.txtInputSecondNumber.Location = new System.Drawing.Point(425, 279);
+            this.txtInputSecondNumber.Location = new System.Drawing.Point(425, 251);
             this.txtInputSecondNumber.MaxLength = 45000;
             this.txtInputSecondNumber.Multiline = true;
             this.txtInputSecondNumber.Name = "txtInputSecondNumber";
@@ -175,6 +176,7 @@
             this.txtInputSecondNumber.TabIndex = 4;
             this.txtInputSecondNumber.Text = "Input Second Number";
             this.txtInputSecondNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInputSecondNumber.TextChanged += new System.EventHandler(this.txtInputSecondNumber_TextChanged);
             // 
             // btnExit
             // 
@@ -198,11 +200,12 @@
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(425, 368);
+            this.txtResult.Location = new System.Drawing.Point(425, 341);
             this.txtResult.MaxLength = 45000;
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(178, 42);
+            this.txtResult.ReadOnly = true;
+            this.txtResult.Size = new System.Drawing.Size(178, 39);
             this.txtResult.TabIndex = 7;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtResult.TextChanged += new System.EventHandler(this.txtResult_TextChanged);

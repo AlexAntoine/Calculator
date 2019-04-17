@@ -18,7 +18,7 @@ namespace Calculator
             return Convert.ToString(a + b);
         }
 
-        public string subtract(int a, int b)
+        public string subtract(double a, double b)
         {
             return Convert.ToString(a - b);
         }
