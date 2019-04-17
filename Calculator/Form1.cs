@@ -67,7 +67,26 @@ namespace Calculator
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
+            if (double.TryParse(txtInputFirstNumber.Text, out first) && double.TryParse(txtInputSecondNumber.Text, out second))
+            {
+                if(second == 0)
+                {
+                    MessageBox.Show("cannot divide by a 0, please try a different number");
+                    txtInputSecondNumber.Clear();
+                }
+                else
+                {
+                    txtResult.Visible = true;
+                    txtResult.Text = cal.add(first, second);
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("You input was invalid, please enter a number");
+                txtInputFirstNumber.Clear();
+                txtInputSecondNumber.Clear();
+            }
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)

@@ -28,7 +28,7 @@ namespace Calculator
             return Convert.ToString(a * b);
         }
 
-        public string divide(int a, int b)
+        public string divide(double a, double b)
         {
             return Convert.ToString(a / b);
         }
