@@ -23,7 +23,7 @@ namespace Calculator
             return Convert.ToString(a - b);
         }
 
-        public string multiply(int a, int b)
+        public string multiply(double a, double b)
         {
             return Convert.ToString(a * b);
         }

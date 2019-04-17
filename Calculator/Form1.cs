@@ -72,7 +72,18 @@ namespace Calculator
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
+            if (double.TryParse(txtInputFirstNumber.Text, out first) && double.TryParse(txtInputSecondNumber.Text, out second))
+            {
+                txtResult.Visible = true;
+                txtResult.Text = cal.multiply(first, second);
 
+            }
+            else
+            {
+                MessageBox.Show("You input was invalid, please enter a number");
+                txtInputFirstNumber.Clear();
+                txtInputSecondNumber.Clear();
+            }
         }
 
         private void btnIntegerDivision_Click(object sender, EventArgs e)
