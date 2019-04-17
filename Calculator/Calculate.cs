@@ -33,9 +33,14 @@ namespace Calculator
             return Convert.ToString(a / b);
         }
 
-        public string intergerDivision(float a, float b)
+        public string intergerDivision(double a, double b)
         {
             return Convert.ToString(a / (int)b);
+        }
+
+        public string percent(double a, double b)
+        {
+            return Convert.ToString(a / 100);
         }
 
         
