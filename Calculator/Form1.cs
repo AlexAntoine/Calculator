@@ -81,12 +81,14 @@ namespace Calculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            txtInputFirstNumber.Clear();
+            txtInputSecondNumber.Clear();
+            txtResult.Clear();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void txtResult_TextChanged(object sender, EventArgs e)
