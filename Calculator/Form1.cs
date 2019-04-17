@@ -12,6 +12,9 @@ namespace Calculator
 {
     public partial class frmCalculator : Form
     {
+        Calculate cal = new Calculate();
+        double first, second;
+
         public frmCalculator()
         {
             InitializeComponent();
@@ -44,7 +47,16 @@ namespace Calculator
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            if (double.TryParse(txtInputFirstNumber.Text, out first) && double.TryParse(txtInputSecondNumber.Text, out second))
+            {
+                txtResult.Text = cal.add(first, second);
+            }
+            else
+            {
+                MessageBox.Show("You input was invalid, please enter a number");
+                txtInputFirstNumber.Clear();
+                txtInputSecondNumber.Clear();
+            }
         }
 
         private void btnDivide_Click(object sender, EventArgs e)

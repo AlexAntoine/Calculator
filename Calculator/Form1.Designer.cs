@@ -30,16 +30,16 @@
         {
             this.lblCalculator = new System.Windows.Forms.Label();
             this.grpExtraFunctions = new System.Windows.Forms.GroupBox();
+            this.btnPercent = new System.Windows.Forms.Button();
+            this.btnIntegerDivision = new System.Windows.Forms.Button();
+            this.btnModulus = new System.Windows.Forms.Button();
             this.grpNormalFunctions = new System.Windows.Forms.GroupBox();
+            this.btnMultiply = new System.Windows.Forms.Button();
+            this.btnDivide = new System.Windows.Forms.Button();
+            this.btnSubtract = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtInputFirstNumber = new System.Windows.Forms.TextBox();
             this.txtInputSecondNumber = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnSubtract = new System.Windows.Forms.Button();
-            this.btnDivide = new System.Windows.Forms.Button();
-            this.btnMultiply = new System.Windows.Forms.Button();
-            this.btnModulus = new System.Windows.Forms.Button();
-            this.btnIntegerDivision = new System.Windows.Forms.Button();
-            this.btnPercent = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtResult = new System.Windows.Forms.TextBox();
@@ -71,6 +71,36 @@
             this.grpExtraFunctions.Text = "Pick A Function";
             this.grpExtraFunctions.Enter += new System.EventHandler(this.grpExtraFunctions_Enter);
             // 
+            // btnPercent
+            // 
+            this.btnPercent.Location = new System.Drawing.Point(89, 132);
+            this.btnPercent.Name = "btnPercent";
+            this.btnPercent.Size = new System.Drawing.Size(143, 42);
+            this.btnPercent.TabIndex = 2;
+            this.btnPercent.Text = "Percent";
+            this.btnPercent.UseVisualStyleBackColor = true;
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
+            // 
+            // btnIntegerDivision
+            // 
+            this.btnIntegerDivision.Location = new System.Drawing.Point(190, 56);
+            this.btnIntegerDivision.Name = "btnIntegerDivision";
+            this.btnIntegerDivision.Size = new System.Drawing.Size(143, 44);
+            this.btnIntegerDivision.TabIndex = 1;
+            this.btnIntegerDivision.Text = "Integer Divsion";
+            this.btnIntegerDivision.UseVisualStyleBackColor = true;
+            this.btnIntegerDivision.Click += new System.EventHandler(this.btnIntegerDivision_Click);
+            // 
+            // btnModulus
+            // 
+            this.btnModulus.Location = new System.Drawing.Point(21, 56);
+            this.btnModulus.Name = "btnModulus";
+            this.btnModulus.Size = new System.Drawing.Size(143, 44);
+            this.btnModulus.TabIndex = 0;
+            this.btnModulus.Text = "Modululs";
+            this.btnModulus.UseVisualStyleBackColor = true;
+            this.btnModulus.Click += new System.EventHandler(this.btnModulus_Click);
+            // 
             // grpNormalFunctions
             // 
             this.grpNormalFunctions.Controls.Add(this.btnMultiply);
@@ -85,9 +115,48 @@
             this.grpNormalFunctions.Text = "Pick A Function";
             this.grpNormalFunctions.Enter += new System.EventHandler(this.grpNormalFunctions_Enter);
             // 
+            // btnMultiply
+            // 
+            this.btnMultiply.Location = new System.Drawing.Point(171, 132);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(86, 36);
+            this.btnMultiply.TabIndex = 3;
+            this.btnMultiply.Text = "Multiply";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            // 
+            // btnDivide
+            // 
+            this.btnDivide.Location = new System.Drawing.Point(26, 128);
+            this.btnDivide.Name = "btnDivide";
+            this.btnDivide.Size = new System.Drawing.Size(86, 40);
+            this.btnDivide.TabIndex = 2;
+            this.btnDivide.Text = "Divide";
+            this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
+            // 
+            // btnSubtract
+            // 
+            this.btnSubtract.Location = new System.Drawing.Point(171, 52);
+            this.btnSubtract.Name = "btnSubtract";
+            this.btnSubtract.Size = new System.Drawing.Size(86, 43);
+            this.btnSubtract.TabIndex = 1;
+            this.btnSubtract.Text = "Subtract";
+            this.btnSubtract.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(26, 56);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(86, 34);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // txtInputFirstNumber
             // 
-            this.txtInputFirstNumber.Location = new System.Drawing.Point(425, 170);
+            this.txtInputFirstNumber.Location = new System.Drawing.Point(433, 174);
             this.txtInputFirstNumber.MaxLength = 45000;
             this.txtInputFirstNumber.Multiline = true;
             this.txtInputFirstNumber.Name = "txtInputFirstNumber";
@@ -106,75 +175,6 @@
             this.txtInputSecondNumber.TabIndex = 4;
             this.txtInputSecondNumber.Text = "Input Second Number";
             this.txtInputSecondNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(26, 56);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 34);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnSubtract
-            // 
-            this.btnSubtract.Location = new System.Drawing.Point(171, 52);
-            this.btnSubtract.Name = "btnSubtract";
-            this.btnSubtract.Size = new System.Drawing.Size(86, 43);
-            this.btnSubtract.TabIndex = 1;
-            this.btnSubtract.Text = "Subtract";
-            this.btnSubtract.UseVisualStyleBackColor = true;
-            // 
-            // btnDivide
-            // 
-            this.btnDivide.Location = new System.Drawing.Point(26, 128);
-            this.btnDivide.Name = "btnDivide";
-            this.btnDivide.Size = new System.Drawing.Size(86, 40);
-            this.btnDivide.TabIndex = 2;
-            this.btnDivide.Text = "Divide";
-            this.btnDivide.UseVisualStyleBackColor = true;
-            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
-            // 
-            // btnMultiply
-            // 
-            this.btnMultiply.Location = new System.Drawing.Point(171, 132);
-            this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(86, 36);
-            this.btnMultiply.TabIndex = 3;
-            this.btnMultiply.Text = "Multiply";
-            this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
-            // 
-            // btnModulus
-            // 
-            this.btnModulus.Location = new System.Drawing.Point(21, 56);
-            this.btnModulus.Name = "btnModulus";
-            this.btnModulus.Size = new System.Drawing.Size(143, 44);
-            this.btnModulus.TabIndex = 0;
-            this.btnModulus.Text = "Modululs";
-            this.btnModulus.UseVisualStyleBackColor = true;
-            this.btnModulus.Click += new System.EventHandler(this.btnModulus_Click);
-            // 
-            // btnIntegerDivision
-            // 
-            this.btnIntegerDivision.Location = new System.Drawing.Point(190, 56);
-            this.btnIntegerDivision.Name = "btnIntegerDivision";
-            this.btnIntegerDivision.Size = new System.Drawing.Size(143, 44);
-            this.btnIntegerDivision.TabIndex = 1;
-            this.btnIntegerDivision.Text = "Integer Divsion";
-            this.btnIntegerDivision.UseVisualStyleBackColor = true;
-            this.btnIntegerDivision.Click += new System.EventHandler(this.btnIntegerDivision_Click);
-            // 
-            // btnPercent
-            // 
-            this.btnPercent.Location = new System.Drawing.Point(89, 132);
-            this.btnPercent.Name = "btnPercent";
-            this.btnPercent.Size = new System.Drawing.Size(143, 42);
-            this.btnPercent.TabIndex = 2;
-            this.btnPercent.Text = "Percent";
-            this.btnPercent.UseVisualStyleBackColor = true;
-            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
             // 
             // btnExit
             // 
@@ -211,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 556);
+            this.ClientSize = new System.Drawing.Size(1119, 538);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnExit);

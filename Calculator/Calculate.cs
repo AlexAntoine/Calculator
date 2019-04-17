@@ -13,7 +13,7 @@ namespace Calculator
 
         }
 
-        public string add(int a, int b)
+        public string add(double a, double b)
         {
             return Convert.ToString(a + b);
         }
@@ -37,5 +37,7 @@ namespace Calculator
         {
             return Convert.ToString(a / (int)b);
         }
+
+        
     }
 }
